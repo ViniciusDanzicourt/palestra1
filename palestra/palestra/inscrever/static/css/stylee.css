@@ -1,0 +1,23 @@
+.section_one {
+    padding-top: 1%;
+    margin: auto;
+    width: 90%;
+    border: 2px solid #dee2e6;
+    margin-top: 1%;   
+}
+
+.section_page {
+    padding-top: 5%;
+    margin: auto;
+    width: 90%;
+    
+    
+}
+
+.center_inscricao {
+    margin: auto;
+    width: 50%;
+    border: 2px solid #dee2e6;
+    padding: 20px;
+    margin-top: 2%;
+}

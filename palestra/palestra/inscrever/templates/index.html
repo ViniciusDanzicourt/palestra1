@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>One Page</title>
+    <script src="{% static "js/jquery.maskedinput.min.js" %}" charset="utf-8"></script>
+    <script src="{% static "js/bootstrap.min.js" %}" charset="utf-8"></script>
+    <script src="{% static "s/bootstrap.js" %}" charset="utf-8"></script>
+    <script src="{% static "js/jquery.min.js" %}" charset="utf-8"></script>
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="icon" href="{% static "img/palestra.png" %}" type="image/x-icon" />
+</head>
+<body>
+<nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
+  <a class="navbar-brand" href="#">OnePage</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#lista_de_palestra" style="color: black;">Lista de Palestra</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#inscrever_em_palestra" style="color: black;">Inscrever em Palestra</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="section_one" style="padding-top: 2%;">
+    <!-- Section 1 -->
+    
+    <div class="section_page" id="lista_de_palestra">
+      <h2 style="text-align: center">Lista de Palestras </h2>
+      
+       <div class="row">
+           {% for i in pales %}
+            <div class="card col-4" style="width: 18rem;">
+                <img class="card-img-top" src="{{i.imagem.url}}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{i.nome}}.</h5>
+                    <p class="card-text">{{i.descrecao}} </p>
+                    <a href="#inscrever_em_palestra" class="btn btn-primary">Inscreva-se</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <!-- Section 2 -->
+    <div class="section_page"  id="inscrever_em_palestra">
+       <div class="center_inscricao">
+           <h3 style="text-align: center;"> Cadastro em Palestra</h3>
+            <form method="POST">
+                {% csrf_token %}
+                   
+                    <label for="id_nome">Nome:</label> 
+                    <input class="form-control" id="id_nome" maxlength="100" name="nome" type="text" />
+                    <label for="id_telefone">Telefone:</label> 
+                    <input class="form-control" id="id_telefone" maxlength="20" name="telefone" type="text" />
+                    <label for="id_email">Email:</label> 
+                    <input class="form-control" id="id_email" maxlength="75" name="email" type="email" />
+                    <label for="id_palestra">Palestra:</label> 
+                    <select class="form-control" id="id_palestra" name="palestra">
+                        <option value="" selected="selected">---------</option>
+                        {% for i in pales %}
+                            <option value="{{i.id}}">{{i.nome}}</option>
+                        {% endfor %}
+                    </select>
+                
+                <div class="row">
+                    <div class="form-group col-2">
+                        <button class="btn btn-primary my-2 my-sm-1" type="submit">Cadastrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <br>
+       <br>
+    </div>
+</div>
+<script src="{% static "js/bootstrap.mim.js" %}" charset="utf-8"></script>
+<script src="{% static "js/bootstrap.js" %}" charset="utf-8"></script>
+<script src="{% static "js/jquery.min.js" %}" charset="utf-8"></script>
+<script type="text/javascript" src="{% static "js/jquery.maskedinput.min.js" %}"></script>
+<script type="text/javascript">
+var $mas = jQuery.noConflict();
+    $mas(function($mas){
+        $mas("#id_telefone").mask("(099) 9 9999-9999");
+    });
+</script>
+</body>
+</html>
+

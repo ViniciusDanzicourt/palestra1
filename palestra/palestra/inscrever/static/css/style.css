@@ -1,0 +1,143 @@
+.center_login {
+    margin: auto;
+    width: 50%;
+    border: 2px solid #dee2e6;
+    padding: 20px;
+    margin-top: 10%;
+}
+
+.novo_cadastro {
+    margin: auto;
+    width: 80%;
+    padding: 1px;
+    margin-top: 0%;
+}
+
+
+
+#btn_login {
+    width: 100%;
+}
+
+#navbar_pricipal {
+    background: #007bff;
+    color: white;
+}
+
+#painel_opcao {
+    margin-left: 20px;
+}
+
+#img_id {
+    margin-top: 10px;
+}
+
+.img_logo {
+    width: 14%;
+    height: 60%;
+    margin-left: 20px;
+}
+
+.button_menu {
+    float: right;
+}
+
+
+.center_home {
+    margin: auto;
+    width: 100%;
+    border: 2px solid #dee2e6;
+    padding: 1px;
+}
+
+.table_lista {
+    margin: auto;
+    width: 90%;
+    border: 2px solid #dee2e6;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+.center_home {
+    margin: auto;
+    width: 90%;
+    border: 2px solid #dee2e6;
+    padding: 250px;
+    margin-top: 1%;
+}
+
+.table_home {
+    margin: auto;
+    width: 80%;
+    border: 2px solid #dee2e6;
+    margin-top: 6%;
+}
+
+.table_historico{
+    margin: auto;
+    width: 80%;
+    border: 2px solid #dee2e6;
+}
+
+.descricao{
+    margin: auto;
+    width: 80%;
+}
+
+
+
+.titulo{
+    margin: auto;
+    width: 80%;
+    margin-top: 1%;
+}
+
+.titulo_descricao{
+    margin: auto;
+    width: 100%;
+    margin-top: 1%;
+}
+
+
+.table_descricao {
+    margin: auto;
+    width: 90%;
+    border: 2px solid #dee2e6;
+    margin-top: 1%;
+}
+
+.paginacao_home {
+    margin: auto;
+    width: 80%;
+    margin-top: 1%;
+}
+
+.descricao_home {
+    margin-top: 2%;
+    margin-left: 70px;
+    width: 90%;
+}
+
+.section_one {
+    padding-top: 1%;
+    margin: auto;
+    width: 90%;
+    border: 2px solid #dee2e6;
+    margin-top: 1%;   
+}
+
+.section_page {
+    padding-top: 5%;
+    margin: auto;
+    width: 90%;
+    
+    
+}
+
+.center_inscricao {
+    margin: auto;
+    width: 50%;
+    border: 2px solid #dee2e6;
+    padding: 20px;
+    margin-top: 2%;
+}
